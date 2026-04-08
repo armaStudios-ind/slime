@@ -18,7 +18,7 @@ public class BackgroundController : MonoBehaviour
     {
       
         startingX = transform.position.x;
-        startingY = transform.position.y;
+        
         length = GetComponent<SpriteRenderer>().bounds.size.x;
     }
 
@@ -31,7 +31,7 @@ public class BackgroundController : MonoBehaviour
        
         
 
-        transform.position = new Vector3(startingX + distance, startingY, transform.position.z);
+        transform.position = new Vector3(startingX + distance, transform.position.y, transform.position.z);
 
         if (movement > startingX + length)
         {
